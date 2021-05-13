@@ -1,6 +1,7 @@
 {
   "version": 1,
   "cli": {
+    "analytics": "97a3b7d3-075c-437d-888e-bf7406553467",
     "defaultCollection": "@nrwl/angular"
   },
   "defaultProject": "stream-displays",
@@ -51,7 +52,10 @@
               "apps/stream-displays/src/favicon.ico",
               "apps/stream-displays/src/assets"
             ],
-            "styles": ["apps/stream-displays/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/stream-displays/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -142,6 +146,31 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/stream-displays-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "xml-response-handler": {
+      "projectType": "library",
+      "root": "libs/xml-response-handler",
+      "sourceRoot": "libs/xml-response-handler/src",
+      "prefix": "easy-score-livestream",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/xml-response-handler/src/**/*.ts",
+              "libs/xml-response-handler/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/xml-response-handler"],
+          "options": {
+            "jestConfig": "libs/xml-response-handler/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }
