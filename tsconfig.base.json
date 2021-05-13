@@ -18,7 +18,8 @@
       "@easy-score-livestream/types": ["libs/types/src/index.ts"],
       "@easy-score-livestream/xml-response-handler": [
         "libs/xml-response-handler/src/index.ts"
-      ]
+      ],
+      "@easy-score-livestream/livestats": ["libs/livestats/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

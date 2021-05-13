@@ -17,9 +17,12 @@ import { ReactiveComponentModule } from '@ngrx/component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddGamesComponent } from './add-games/add-games.component';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AddGamesComponent],
   imports: [
     BrowserModule,
     StoreModule.forRoot(
@@ -38,6 +41,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     StoreModule.forFeature(fromGames.GAMES_FEATURE_KEY, fromGames.reducer),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     BrowserAnimationsModule,
+    AppRoutingModule,
     MatFormFieldModule,
     MatInputModule,
     MatListModule,
@@ -45,6 +49,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     MatButtonModule,
     ReactiveFormsModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

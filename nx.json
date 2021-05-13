@@ -31,6 +31,9 @@
     },
     "xml-response-handler": {
       "tags": []
+    },
+    "livestats": {
+      "tags": []
     }
   }
 }

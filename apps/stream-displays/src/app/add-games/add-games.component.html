@@ -1,0 +1,11 @@
+<mat-nav-list>
+  <mat-list-item *ngFor="let game of games$ | ngrxPush">
+    {{ game.homeTeam.name }} vs. {{ game.awayTeam.name }}
+  </mat-list-item>
+</mat-nav-list>
+<mat-form-field appearance="standard">
+  <mat-label>Enter Game ID</mat-label>
+  <input [formControl]="gameIdForm" matInput placeholder="xxxxx" />
+  <mat-hint>Copy the GameID from EasyScores URL to the Gamecast</mat-hint>
+  <button mat-button (click)="addGame()">Add Game</button>
+</mat-form-field>
